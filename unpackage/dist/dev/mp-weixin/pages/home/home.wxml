@@ -1,0 +1,1 @@
+<view class="home"><home-banner wx:if="{{b}}" bindbannerItemClick="{{a}}" u-i="10fff2ed-0" bind:__l="__l" u-p="{{b}}"/><home-recommend wx:if="{{d}}" binditemClick="{{c}}" u-i="10fff2ed-1" bind:__l="__l" u-p="{{d}}"/><home-popular u-i="10fff2ed-2" bind:__l="__l"/></view>

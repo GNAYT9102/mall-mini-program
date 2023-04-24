@@ -11,7 +11,7 @@
 	>
 		<template v-for="item in banners" :key="item.title">
 			<swiper-item @click="handleItemClick(item)">
-				<image class="image" :src="item.image" mode="widthFix"></image>
+				<image class="image" lazy-load :src="item.image" mode="widthFix"></image>
 			</swiper-item>
 		</template>
 	</swiper>

@@ -48,5 +48,19 @@
 				}
 			}
 		}
+
+		// 粘性定位
+		position: sticky;
+
+		/* #ifdef H5 */
+		top: 88rpx;
+		/* #endif */
+
+		/* #ifdef MP-WEIXIN */
+		top: 0rpx;
+		/* #endif */
+
+		z-index: 999;
+		background-color: white;
 	}
 </style>

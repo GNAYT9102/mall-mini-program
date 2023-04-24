@@ -1,0 +1,26 @@
+.tab-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10rpx;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 10rpx;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0rpx;
+  z-index: 999;
+  background-color: white;
+}
+.tab-control .item {
+  flex: 1;
+}
+.tab-control .item .title {
+  display: inline-block;
+  padding: 16rpx;
+  border-bottom: 6rpx solid transparent;
+}
+.tab-control .item .title.active {
+  border-bottom: 6rpx solid #ff5777;
+  color: #ff5777;
+}

@@ -8,11 +8,21 @@
 		<HomePopular />
 		<!-- 选项卡组件 -->
 		<tab-control :titles="['流行', '新款', '精选']" @tabItemClick="tabItemClick" />
+		
+		<!-- 列表 -->
+		<uni-grid :column="2" border-color="#ff8198">
+			<template v-for="item in count">
+				<uni-grid-item>
+					<view class="item">{{ item }}</view>
+				</uni-grid-item>
+			</template>
+		</uni-grid>
 	</view>
 </template>
 
 <script setup>
-	import { onLoad } from "@dcloudio/uni-app"
+	import { ref } from 'vue'
+	import { onLoad, onReachBottom } from "@dcloudio/uni-app"
 	import { storeToRefs } from "pinia"
 	import { useHomeStore } from "@/store/useHomeStore.js"
 	import HomeBanner from "./cpns/home-banner.vue"
@@ -41,9 +51,14 @@
 	}
 
 	// tab-control点击事件
-	const tabItemClick = (index) => {
-		console.log(index)
-	}
+	const tabItemClick = (index) => {}
+
+	const count = ref(10)
+	// 上拉加载
+	onReachBottom(() => {
+		count.value = count.value + 10
+	})
+	
 </script>
 
 <style lang="scss"></style>

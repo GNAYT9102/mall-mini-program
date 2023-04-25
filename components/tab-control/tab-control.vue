@@ -60,7 +60,7 @@
 		top: 0rpx;
 		/* #endif */
 
-		z-index: 999;
+		z-index: 99;
 		background-color: white;
 	}
 </style>
